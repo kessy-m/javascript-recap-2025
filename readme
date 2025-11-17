@@ -1,0 +1,311 @@
+**INTRODUCTION TO JAVASCRIPT**
+-> A web application has the following building blocks:
+1.HTML - defines the structure / content of the webpage
+2.CSS - defines the appearance of the webpage
+3.JS  - enable user interactivity
+
+**What do we use JS for?**
+1.User Interactivity - webpage responding to user actions e.g typing, clicking buttons,
+scrolling,hovering e.t.c
+2.Reactivity - making our pages dynamic -> the page content is able to change itself 
+without reloading
+
+**JS can run in two environments:
+1. In the browser -> client side JS
+2. In the server -> NodeJS
+
+
+**Where can we write JS?**
+-> depends on how much JS code you have to write
+1.Internal JS -> witing JS inside a HTML document
+        a) In the head section - if you want to run JS before HTML
+        b) In the body section - right above the closing body tag (common)
+2.External JS -( best way)
+----> for a large JS codebase
+---> create an external JS file with a .js extension
+---->link your external script to html using src attribute in script element
+
+** JS is a high level, interpreted language that makes web applications interactive
+
+1.VARIABLES
+-> Named container / memory space used to store values
+-> How to declare variables in JS
+1. Using the let keyword 
+    -> the most common way
+    -> used when you want to reassign / change the value of a variable
+    e.g let x = 5 // declaration & assignment
+        x = 12 // reassignment
+
+2. Using the const keyword
+    -> represents constant values
+    -> values here cant be changed or reassigned
+    -> e.g. const pi = 3.142
+
+3. Using the var keyword - outdated
+    -> works just like 'let'
+    -> was replaced by let
+    -> works in older browsers 
+
+**DATA TYPES**
+1.String - sequence of characters / text enclosed in quotations
+2.Number - represents numeric values - both whole (integers) and decimal
+3.Boolean - represents Truth values - true and false
+
+->How to output in JS?
+**console.log()
+
+-> Checking for data type in JS
+** typeof()
+
+
+
+**Comments**
+-> A way of documenting code -commented lines are ignored by the interpreter
+->Types of comments:
+1.Multiline comment -> /* */
+2.Single line comment - //
+
+**STRING METHODS & OPERATIONS**
+-Methods are inbuilt functions used to manipulate data
+
+1.Concatenation - joining or combining strings 
+            a) Using "+" operator
+            b) using concat() method
+2.Template literals - a way of embedding or including variables inside strings
+        -use backticks, $ and {}
+3.Accessing characters in a string - strings are ordered - use indexing
+        N/B:- In accessing string characters in JS , we dont have -ve indexing
+4.Determine no of characters in a string - .length
+5. .slice() - returns the portion / substring of a full string
+        .slice(start,end)
+        **slice allows -ve indexing
+6. .toUpperCase() - converts a string to uppercase format
+7. .toLowerCase() - converts a string to lowercase format
+8. .includes() - determines whether a specified character or substring is part of a string
+            -returns a Boolean value
+9. .startsWith() - checks whether a string begins with a specified character or substring
+10. .endsWith() - checks whether a string ends with a specified character or substring
+                - return Boolean values
+11. .indexOf() - returns the first occurrence of a specified character or characters
+        e.g "Hello"
+12. .replace() - replaces  specified character/s with a new value
+            .replace(old_value, new_value)
+13. .trim() - removing whitespaces from a string
+            - trimLeft() or trimStart()
+            - trimRight() or trimEnd()
+14.split()
+
+
+**NUMERIC OPERATIONS**
+1.addition -> +
+2.subtraction -> -
+3.division - /
+4.multiplication - *
+6.exponent - **
+7.modulus - %
+8.increment -> ++ -> increase by 1
+9. decrement -> -- -> decrease by 1
+10. .toString() - changes a number to a string
+11. .toFixed() - rounds off a number to specified decimal places
+12. Math.round() - rounds a number to the nearest integer
+13. Math.floor() - round down
+14. Math.ceil() - round up
+
+**TASK**
+1.slide 53
+2.slide 57
+
+                        **LESSON 2**
+**User Input**
+-Makes programs interactive and dynamic
+-In JS we take user input using prompt()
+-Any data coming from user input is always a string
+**Changing Data Type**
+**String -> Number
+**Number -> String
+**Boolean conversions
+
+1.Type conversion -> manual changing of data from one type to another
+                -> explicitly done by the programmer
+        **Convert string to number**
+        a)Number() - convert string to number
+        b)parseInt() - convert string to integer
+        c)parseFloat() -convert string to decimal number
+
+        **Convert number to string**
+        a) String()
+        b).toString()
+
+2.Type coercion - where data is automatically changed from one type to another by 
+                the language / interpreter 
+                -> not changed by the programmer
+        -> Polymorphism -> operator overloading -> an operator takes more than one form
+        + -> concat -> addition
+
+**JS OPERATORS**
+-> Operators are symbols used to perfom specific tasks
+-> We have 4 categories of operators:
+1.Arithmetic Operators -numeric operations
+-> + (addition)
+-> - (subtract)
+-> / (divide)
+-> * (multiply)
+-> ** (exponential)
+-> % (modulus)
+-> ++(increment) - increases by 1
+-> --(decrement) - decreases by 1
+
+2.Comparison Operators -compares values
+-> == (loose equality) -> type coercion happens -> checks only for the value not data type
+-> ===(strict equality) -> no type coercion -> checks for both value and data type
+-> != (loose inequality)
+-> !==(strict inequality)
+-> > (greater than)
+-> < (less than)
+-> >= (greater than or equal to)
+-> <= (less than or equal to)
+
+3.Logical Operators - logical operations
+-> Logical and - && ->  returns true only if both conditions are true
+-> Logical or -> || -> returns true if t least on condition is true
+-> Logical not -> ! - returns the opposite of a Boolean value
+
+
+4.Assignment Operators - assigns values
+-> = (assign)
+-> += (add and assign)
+-> -= (subtract nd assign)
+-> *= (multiply and assign)
+-> /= (divide and assign)
+-> **= (raise to a number and assign)
+-> %= (get remainder and assign)
+
+
+**Task**
+1.Find out what the 'in' operator does and illustrate with Javascript code - use w3schools or geeksforgeeks as references
+2. Write a program that takes 2 numeric user inputs and outputs the following:
+  -> their sum
+  -> their subtraction
+  -> their modulus
+  -> their exponent
+3.review & redo any undone task on slide 57
+
+
+       **CONDITIONAL STATEMENTS**
+-> Enables us to write programs that make decisions based on inputs
+-> if-else statements 
+-> syntax:
+{} - represents blocks
+
+scenario -> you have one condition e.g. check whether number is even
+if (condition){
+    //what haappens if condition is true / met
+} else{
+   // what happens if condition is false / not met
+}
+
+scenario -> you have multiple conditions
+if , else if , else
+
+if (condition 1){
+        what happens if condition 1 is met
+} else if (condition 2){
+        what happens if condition 2 is met
+} else if (condition 3){
+        what happens if condition 3 is met
+} else{
+      what happens if all conditions are false 
+}
+
+
+                **In class task**
+1.Using an if statement write a program that checks
+ whether a number is even or odd
+
+2.Write a Javascript program that checks which number is the largest
+among 3 numbers -> take 3 user inputs and determine which number is the largest.
+
+ **ternary operator**
+-> ?
+-> shorthand for if-else statements
+-> works only when there is one condition
+-> syntax:
+   condition ? expression if condition is true : expression if condition is false
+
+   In class task
+1.Write a program using ternary operator that checks whether a person is an
+eligible voter -> criteria: an eligible voter has to be 18 years old or older
+
+**Task**
+-Slide 66
+-> leap year
+Create a variable called year and enter the a random year.
+ Check if the year is a leap year or not. A leap year is a
+  year that is divisible by 4  not divisible by 100 or divisible  by 400.
+-> 1800 - not leap
+-> 1600 - leap
+-> 2000 - leap
+-> 2008 - leap
+1800  / 4 -> 450 
+If it is divisible by 4 it cant be divisible by 100 
+-> And if that year is divisible by 100 , it has to be divisible by 400
+-> Every year divisible by 400 is always a leap year
+
+Nested if
+-> An if statement within another if statement
+e.g.Write a js program that checks if a variable student_score
+ is greater than 90. If true, check if the attendance is greater than 80. 
+ If both conditions are true, display"Excellent student", otherwise display
+  "Good score, but attendance needs improvement"
+
+
+
+**TASK**
+1. Write if…else to print:
+"Empty" if string length is 0
+"Short" if 1–5 characters
+"Medium" if 6–10 characters
+"Long" if more than 10 characters
+
+
+2. Write a program that calculates the ticket price 
+based on age with the following conditions: age below
+12 pay a ticket price of 5, age below 18 pay a ticket 
+price of 10, age below 60 pay a ticket price of 20,
+age over 60 play a ticket price of 15.
+
+
+3.Write a program that calculates a discount based on the
+ purchase amount.Prices equal or over 100 discount have a 
+ discount of 20. Prices equal or over 50 have a discount of 10.
+Otherwise discount is 0
+
+
+4.Write an if…else that prints "Match" if a variable val is the 
+number 5 or the string "5", but does not match "05" or 5.0.
+
+
+5.Given a variable str, write an if…else that prints:
+"Empty" if it’s an empty string or whitespace only
+"Number" if it can be converted to a number (e.g., "123")
+"Text" otherwise
+
+
+6.Write if…else to handle a variable num such that:
+Print "Integer" if it’s a whole number
+Print "Float" if it’s a number but has decimals
+Print "Not a number" otherwise
+
+
+7.Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
+September, October or November, the season is Autumn.
+December, January or February, the season is Winter.
+March, April or May, the season is Spring
+June, July or August, the season is Summer
+
+
+8.Write a JavaScript that takes 3 numeric inputs and outputs them
+in ascending order from smallest to largest
+
+9.Write a program to check whether the last digit entered by a user is divisible by 3
+
