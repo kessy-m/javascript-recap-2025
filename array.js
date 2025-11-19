@@ -103,3 +103,30 @@ console.log(x)
 let y=['Mark','John','Jack']
 y.reverse()
 console.log(y)
+
+
+// slice-extract a portion of an array to create a new array
+let c=[12,13,14,15,16]
+console.log(c.slice(1,4))
+
+
+
+// spread operator -to copy arrays
+let arr1=[10,20,30]
+let arr2=[...arr1]
+console.log(arr2)//[10,20,30]
+
+// spread operator-merge arrays more like concating
+let i=['Python','Javascript']
+let j=['HTML','CSS']
+let k=[...i,...j,'PHP']
+console.log(k) //['Python,'Javascript','HTML','CSS','PHP']
+
+
+
+// rest operator-focuses mostly on the elements remaining
+let array=[100,200,300,400,500]
+let [,,...other_elements]=array
+console.log(a) //100
+console.log(b) //200
+console.log(other_elements) //[300,400,500]
