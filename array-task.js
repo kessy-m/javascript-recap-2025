@@ -157,6 +157,8 @@ function students_grade(marks) {
         else {
             return 'Grade is E'
         }
+        else{
+        return 'correct grade'
     }
     else {
         return 'correct grade'
