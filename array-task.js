@@ -62,18 +62,18 @@ function valid_phone_number(phone_num) {
         valid_number = '+' + phone_num
         return 'valid number'
     }
-    else if(phone_num.startswith('01') && phone_num.length==10){
-        valid_number='+254' +phone_num.slice[1]
+    else if (phone_num.startswith('01') && phone_num.length == 10) {
+        valid_number = '+254' + phone_num.slice[1]
         return 'valid number'
     }
-    else{
+    else {
         return 'the phone number is invalid'
     }
 }
 
-let phone_num=Number(prompt('enter phone number:'))
-let valid_number=valid_phone_number(phone_num)
-console.log('valid phone number is:',valid_number)
+let phone_num = Number(prompt('enter phone number:'))
+let valid_number = valid_phone_number(phone_num)
+console.log('valid phone number is:', valid_number)
 
 
 
@@ -140,29 +140,32 @@ console.log('the largest number is:', largest_number)
 // A > 79 , B - 60 to 79, C  > 49 to 59, D - 40 to 49, E - less 40
 // Once you learn functions,revisit this and write this code inside a function.
 
-function students_grade(marks){
-    if(marks>0 && marks>100){
-        if(marks>0 && marks<=79){
+function students_grade(marks) {
+    if (marks > 0 && marks > 100) {
+        if (marks > 0 && marks <= 79) {
             return 'Grade is A'
         }
-        else if(marks>=60 && marks<=79){
+        else if (marks >= 60 && marks <= 79) {
             return 'Grade is B'
         }
-        else if(marks>=49 && marks<=59){
+        else if (marks >= 49 && marks <= 59) {
             return 'Grade is C'
         }
-        else if(marks>=40 && marks<=49){
+        else if (marks >= 40 && marks <= 49) {
             return 'Grade is D'
         }
-        else{
+        else {
             return 'Grade is E'
         }
     }
+    else {
+        return 'correct grade'
+    }
 }
 
-let marks=Number(prompt('enter students marks:'))
-let student_results=students_grade(marks)
-console.log('the student grade is: ',student_results)
+let marks = Number(prompt('enter students marks:'))
+let student_results = students_grade(marks)
+console.log('the student grade is: ', student_results)
 
 
 
@@ -174,6 +177,26 @@ console.log('the student grade is: ',student_results)
 // For example, if the speed is 80, it should print: “Points: 2”.
 // If the driver gets more than 12 points, the function should print: “License suspended”.
 
+function check_speed(speed) {
+    const speed_limit = 70
+    const kmperdemeritpoint = 5
+    if (speed < speed_limit) {
+        return 'ok'
+    }
+    else {
+        demerit_points = (speed - speed_limit) / kmperdemeritpoint;
+        if (demerit_points > 12) {
+            return 'license suspended'
+        }
+        else {
+            return 'license is not suspended'
+        }
+    }
+}
+
+let speed = Number(prompt('enter the speed of the car: '))
+let confirm_speed = check_speed(speed)
+console.log(confirm_speed)
 
 
 
@@ -198,7 +221,22 @@ console.log('the student grade is: ',student_results)
 // NB: ONCE YOU COPY AND PASTE THE LIST ABOVE,REWRITE THE SINGLE QUOTES AS THE ABOVE LIST WILL GIVE YOU AN ERROR.
 // Once you learn functions,revisit this and write this code inside a function.
 
+prods = [['omo', '30kshs', '300'], ['milk', '50kshs', '200'], ['bread', '45kshs', '359'], ['coffee', '5kshs', '79']]
 
+function calc_stock(prods) {
+    let prods = [['omo', '30kshs', '300'], ['milk', '50kshs', '200'], ['bread', '45kshs', '359'], ['coffee', '5kshs', '79']]
+
+    let total_stock = 0
+    for (i = 0; i < prods.length; i++) {
+        let stock = Number(prods[i][2])
+        let sum = stock + total_stock
+        return sum
+    }
+}
+
+let prods = [['omo', '30kshs', '300'], ['milk', '50kshs', '200'], ['bread', '45kshs', '359'], ['coffee', '5kshs', '79']]
+let sum_of_stock = calc_stock(prods);
+console.log('Total stock is:', sum_of_stock)
 
 
 
@@ -214,7 +252,29 @@ console.log('the student grade is: ',student_results)
 // TASK 12: Using Python or PHP or Java or Ruby or JavaScript
 // Write a program that prints the largest of 4 inputs taken as input from a user.
 
+function confirm_largest_number(num_w, num_x, num_y, num_z) {
+    if (num_w > num_x && num_w > num_y && num_w > num_z) {
+        return 'num w is the largest'
+    }
+    else if (num_x > num_w && num_x > num_y && num_x > num_z) {
+        return 'num x is the largest'
+    }
+    else if (num_y > num_w && num_y > num_x && num_y > num_z) {
+        return 'num y is the largest'
+    }
+    else {
+        return 'num z is the largest'
+    }
 
+}
+
+let num_w=Number(prompt('enter the value of num w:'))
+let num_x=Number(prompt('enter the value of num x:'))
+let num_y=Number(prompt('enter the value of num y:'))
+let num_z=Number(prompt('enter the value of num z:'))
+
+let largest_of_number=confirm_largest_number(num_w,num_x,num_y,num_z)
+console.log('the largest number is:',largest_of_number)
 
 
 
@@ -223,6 +283,8 @@ console.log('the student grade is: ',student_results)
 //  checks if they are equal to “admin@mail.com” and password is “Admin@123” ,
 // if so then print  “Login is Successful” and if not print “Invalid username or password”.
 // ONLY accept 3 tries after which it notifies you that you have been blocked.
+
+
 
 
 
