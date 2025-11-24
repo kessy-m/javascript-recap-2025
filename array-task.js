@@ -209,6 +209,21 @@ console.log(confirm_speed)
 // ****
 // *****.....
 
+function create_stars(rows) {
+            for (let i = 1; i < rows.length; i++) {
+                let stars = ""
+                for (let x = 1; x < i; x++) {
+                    stars = stars + "*"
+                }
+                return stars
+            }
+
+        }
+
+        let rows = Number(prompt("enter rows: "));
+        let printed_stars = create_stars(rows)
+        console.log(printed_stars)
+
 
 
 
