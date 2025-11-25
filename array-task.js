@@ -3,7 +3,7 @@
 // Once you learn functions,revisit this and write this code inside a function.
 
 function area_of_triangle(h, b) {
-    let area = 0.5 * h, b;
+    let area = 0.5 * h * b;
     return area;
 }
 
@@ -47,23 +47,23 @@ console.log(check_divisibility)
 // e.g if a user enters “712345678”, the program should display “+254712345678”
 
 function valid_phone_number(phone_num) {
-    if (phone_num.startswith('+254') && phone_num.length == 13) {
+    if (phone_num.startsWith('+254') && phone_num.length == 13) {
         return 'valid number'
     }
-    else if (phone_num.startswith('07') && phone_num.lenght == 10) {
+    else if (phone_num.startsWith('07') && phone_num.lenght == 10) {
         valid_number = '+254' + phone_num.slice[1]
         return 'valid number'
     }
-    else if (phone_num.startswith('7') && phone_num.length == 9) {
+    else if (phone_num.startsWith('7') && phone_num.length == 9) {
         valid_number = '+254' + phone_num
         return 'valid number'
     }
-    else if (phone_num.startswith('254') && phone_num.length == 12) {
+    else if (phone_num.startsWith('254') && phone_num.length == 12) {
         valid_number = '+' + phone_num
         return 'valid number'
     }
-    else if (phone_num.startswith('01') && phone_num.length == 10) {
-        valid_number = '+254' + phone_num.slice[1]
+    else if (phone_num.startsWith('01') && phone_num.length == 10) {
+        valid_number = '+254' + phone_num.slice(1)
         return 'valid number'
     }
     else {
@@ -157,8 +157,6 @@ function students_grade(marks) {
         else {
             return 'Grade is E'
         }
-        else{
-        return 'correct grade'
     }
     else {
         return 'correct grade'
@@ -212,19 +210,19 @@ console.log(confirm_speed)
 // *****.....
 
 function create_stars(rows) {
-            for (let i = 1; i < rows.length; i++) {
-                let stars = ""
-                for (let x = 1; x < i; x++) {
-                    stars = stars + "*"
-                }
-                return stars
-            }
-
+    for (let i = 1; i < rows.length; i++) {
+        let stars = ""
+        for (let x = 1; x < i; x++) {
+            stars = stars + "*"
         }
+        return stars
+    }
 
-        let rows = Number(prompt("enter rows: "));
-        let printed_stars = create_stars(rows)
-        console.log(printed_stars)
+}
+
+let rows = Number(prompt("enter rows: "));
+let printed_stars = create_stars(rows)
+console.log(printed_stars)
 
 
 
@@ -241,7 +239,7 @@ function create_stars(rows) {
 prods = [['omo', '30kshs', '300'], ['milk', '50kshs', '200'], ['bread', '45kshs', '359'], ['coffee', '5kshs', '79']]
 
 function calc_stock(prods) {
-    let prods = [['omo', '30kshs', '300'], ['milk', '50kshs', '200'], ['bread', '45kshs', '359'], ['coffee', '5kshs', '79']]
+    // let prods = [['omo', '30kshs', '300'], ['milk', '50kshs', '200'], ['bread', '45kshs', '359'], ['coffee', '5kshs', '79']]
 
     let total_stock = 0
     for (i = 0; i < prods.length; i++) {
@@ -285,13 +283,13 @@ function confirm_largest_number(num_w, num_x, num_y, num_z) {
 
 }
 
-let num_w=Number(prompt('enter the value of num w:'))
-let num_x=Number(prompt('enter the value of num x:'))
-let num_y=Number(prompt('enter the value of num y:'))
-let num_z=Number(prompt('enter the value of num z:'))
+let num_w = Number(prompt('enter the value of num w:'))
+let num_x = Number(prompt('enter the value of num x:'))
+let num_y = Number(prompt('enter the value of num y:'))
+let num_z = Number(prompt('enter the value of num z:'))
 
-let largest_of_number=confirm_largest_number(num_w,num_x,num_y,num_z)
-console.log('the largest number is:',largest_of_number)
+let largest_of_number = confirm_largest_number(num_w, num_x, num_y, num_z)
+console.log('the largest number is:', largest_of_number)
 
 
 

@@ -126,7 +126,7 @@ console.log(k) //['Python,'Javascript','HTML','CSS','PHP']
 
 // rest operator-focuses mostly on the elements remaining
 let array=[100,200,300,400,500]
-let [,,...other_elements]=array
+let [a,b,...other_elements]=array
 console.log(a) //100
 console.log(b) //200
 console.log(other_elements) //[300,400,500]
